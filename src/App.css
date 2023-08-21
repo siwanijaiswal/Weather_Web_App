@@ -1,13 +1,103 @@
+/* App Container */
 .App {
   text-align: center;
-  margin-top: 50px;
   font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+/* Header */
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input and Buttons */
+input[type="text"] {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: #399ad2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+p.loading {
+  margin: 10px 0;
+  color: #888;
+}
+
 
 .weather-card {
   border: 1px solid #ccc;
   padding: 20px;
   margin: 20px auto;
   width: 300px;
-  background-color: #f5f5f5;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.weather-card h2 {
+  margin: 0;
+  color: #333;
+}
+
+.weather-card p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.weather-icon {
+  max-width: 60px;
+  margin: 10px auto;
+  display: block;
+}
+
+/* Forecast Section */
+.forecast {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.forecast h2 {
+  color: #333;
+}
+
+.forecast ul {
+  list-style: none;
+  padding: 0;
+}
+
+.forecast li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.forecast li img {
+  width: 30px;
+  margin-left: 10px;
 }

@@ -9,7 +9,7 @@ function App() {
   const [forecastData, setForecastData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const apiKey = '9133cee7bcde4363a7571647232108'; // Replace with your actual API key
+  const apiKey = '9133cee7bcde4363a7571647232108'; 
 
   const fetchWeather = async () => {
     try {
@@ -20,7 +20,7 @@ function App() {
       setForecastData(data.forecast.forecastday);
       setIsLoading(false);
     } catch (error) {
-      console.error('Error fetching weather data:', error);
+      console.error('Error in  fetching weather data:', error);
       setWeatherData(null);
       setForecastData([]);
       setIsLoading(false);
@@ -44,14 +44,14 @@ function App() {
             setForecastData(data.forecast.forecastday);
             setIsLoading(false);
           } catch (error) {
-            console.error('Error fetching weather data:', error);
+            console.error('Error in fetching weather data:', error);
             setWeatherData(null);
             setForecastData([]);
             setIsLoading(false);
           }
         },
         (error) => {
-          console.error('Error getting geolocation:', error);
+          console.error('Error in  getting geolocation:', error);
         }
       );
     }
@@ -59,7 +59,7 @@ function App() {
 
   useEffect(() => {
     getLocationWeather();
-  }, []); // Runs once when the component mounts
+  }, []); 
 
   return (
     <div className="App">
@@ -68,7 +68,7 @@ function App() {
         type="text"
         value={city}
         onChange={(e) => setCity(e.target.value)}
-        placeholder="Enter city name"
+        placeholder="Enter City Name"
       />
       <button onClick={fetchWeather}>Search</button>
       <button onClick={getLocationWeather}>Use My Location</button>
